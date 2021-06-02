@@ -36,15 +36,12 @@ public class StudentControllerServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		try {
-			// read the "command" parameter
 			String theCommand = request.getParameter("command");
-			
-			// if the command is missing, then default to listing students
+
 			if (theCommand == null) {
 				theCommand = "LIST";
 			}
-			
-			// route to the appropriate method
+
 			switch (theCommand) {
 			
 			case "LIST":
